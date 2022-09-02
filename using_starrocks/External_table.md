@@ -774,9 +774,9 @@ After an external table is created, you can query the data in Apache Iceberg by 
 select count(*) from iceberg_tbl;
 ~~~
 
-## Hudi external table
+## Apache Hudi external table
 
-StarRocks allows you to query data from Hudi data lakes by using Hudi external tables, thus facilitating blazing-fast data lake analytics. This topic describes how to create a Hudi external table in your StarRocks cluster and use the Hudi external table to query data from a Hudi data lake.
+StarRocks allows you to query data from Apache Hudi data lakes by using Hudi external tables, thus facilitating blazing-fast data lake analytics. This topic describes how to create a Hudi external table in your StarRocks cluster and use the Hudi external table to query data from a Hudi data lake.
 
 ### Before you begin
 
@@ -785,6 +785,8 @@ Make sure that your StarRocks cluster is granted access to the Hive metastore, H
 ### Precautions
 
 * Hudi external tables for Hudi are read-only and can be used only for queries.
+
+* Hudi versions 0.10.0 and above are supported.
 
 * StarRocks supports Hudi Copy on Write (CoW) tables but not Hudi Merge on Read (MoR) tables. For information about the differences between CoW and MoR, see [Table & Query Types](https://hudi.apache.org/docs/table_types/).
 
